@@ -1,0 +1,26 @@
+<div class="dashboard">
+    <div class="button-group">
+        <a routerLink="new-work" routerLinkActive="active" class="new">Dodaj zadanie</a>
+        <div>
+            <input type="date" (input)="getGroupDate($event)" />
+            <button class="group-item" (click)="groupItem()">Grupuj</button>
+        </div>
+    </div>
+    <div class="content">
+        <div *ngFor="let worksType of works">
+            <h2>{{ worksType.title }}</h2>
+            <ul>
+                <li *ngFor="let work of worksType.data">
+                    <h4>{{ work?.name }}</h4>
+                    <div class="button-group">
+                        <button class="edit" (click)="editWork(work)">Edytuj</button>
+                        <button (click)="removeWork(worksType, work)">Usuń</button>
+                    </div>
+                    <span>{{ work?.date | date:"dd/MM/yy" }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

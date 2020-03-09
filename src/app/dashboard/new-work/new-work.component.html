@@ -1,0 +1,24 @@
+<div class="popup">
+  <div class="content">
+    <h2>Dodawanie zadania</h2>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+      <div>
+        <label for="name">
+          Nazwa zadania
+        </label>
+        <input id="name" type="text" autocomplete="off" formControlName="name">
+      </div>
+
+      <div>
+        <label for="date">
+          Data
+        </label>
+        <input id="date" type="date" autocomplete="off" formControlName="date" pattern="\d{4}-\d{2}-\d{2}">
+      </div>
+
+      <button class="button submit" type="submit">Dodaj</button>
+      <button class="button" type="button" (click)="closeForm()">Powrót</button>
+    </form>
+  </div>
+</div>

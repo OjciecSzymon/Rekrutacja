@@ -1,0 +1,118 @@
+ul {
+    padding: 0 10px;
+    li {
+        list-style: none;
+        display: flex;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        padding: 8px 10px;
+        flex-wrap: wrap;
+        > * {
+            margin: auto 0;
+        }
+        h4 {
+            margin-right: auto;
+        }
+        div {
+            margin-left: 10px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+}
+
+button {
+    margin-right: 10px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    font-size: 14px;
+    &.submit, &.edit, &.group-item {
+        background-color: #3485d2;
+        color: #fff;
+        border-color: #3485d2;
+    }
+}
+
+a {
+    margin-right: 10px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    &.new {
+        background-color: #3485d2;
+        color: #fff;
+        border-color: #3485d2;
+    }
+}
+
+h2 {
+    background-color: #3485d2;
+    padding: 10px;
+    margin-top: 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.content {
+    > div {
+        border-radius: 4px;
+        overflow: hidden;
+    }
+}
+
+.button-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+        margin: auto 5px auto 0;
+        input {
+            height: 20px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #d0d0d0;
+            box-shadow: none;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .button-group {
+        > * {
+            input {
+                margin-left: 0;
+            }
+        }
+        div {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    ul {
+        li {
+            h4 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            div {
+                margin-left: 0;
+            }
+            span {
+                margin: auto;
+            }
+        }
+    }
+}
